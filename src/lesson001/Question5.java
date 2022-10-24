@@ -20,6 +20,8 @@ public class Question5 {
 		String isimSoyisim= scanner.nextLine();
 		
 		System.out.println("Hello " +"" + isimSoyisim);
+		
+	
 	}
 
 }
