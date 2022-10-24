@@ -15,7 +15,7 @@ public class Odev1 {
 		
 		
 		float kutle=scanner.nextFloat();    // kg cinsinden kütle girilir
-		float agirlik=kutle/10;				//kütlesi girilen değerin Evrende ki ağırlığı hesaplanır
+		float agirlik=kutle/9.81f;				//kütlesi girilen değerin Evrende ki ağırlığı hesaplanır
 		
 		float kutleAy=agirlik*1.62f;
 		float kutleMars=agirlik*3.721f;
