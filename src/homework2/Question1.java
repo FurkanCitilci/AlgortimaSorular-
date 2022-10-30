@@ -25,14 +25,17 @@ public class Question1 {
 		System.out.println("Test edilecek kelime :" + kelime);
 		System.out.println("****************************************:");
 
-		if (kelime.startsWith("a") || kelime.startsWith("A")) {
-			System.out.println(kelime.charAt(kelime.length() - 1));
 
-		} else if (kelime.startsWith("b")) {
-			System.out.println(kelime.replaceFirst("b", "@"));
-		} else {
-			System.out.println(kelime.charAt(0));
-
+		if(kelime.startsWith("a") || kelime.startsWith("A")) {
+			System.out.println(kelime.charAt(kelime.length()-1));	//kelimenin son indeksi bastırılır
+			
+			}
+		else if(kelime.startsWith("b")) {
+			System.out.println(kelime.replaceFirst("b","@"));		//kelimenin ilk indeksi(0. indeksi) değiştirilir
+		}
+		else {
+			System.out.println(kelime.charAt(1));					//kelimenin birinci indeksi bastırılır
+			
 		}
 		scanner.close();
 
