@@ -7,6 +7,7 @@ public class MuzikKanali extends Kanal {
 
 	}
 
+	//Muzik kanalı bilgileri alındı
 	@Override
 	public String toString() {
 		return "MuzikKanali\n[Kanal ADI:" + getKanalAdi() + " Kanal No:" + getKanalNo() + "]";

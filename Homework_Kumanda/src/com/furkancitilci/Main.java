@@ -3,9 +3,9 @@ package com.furkancitilci;
 import java.util.Scanner;
 
 public class Main {
-	static Kanal kanal;
-	static Televizyon televizyon = new Televizyon();
-	static boolean tvAcik = false;
+	static Kanal kanal;													//Kanal türünden kanal nesnesi oluşturldu
+	static Televizyon televizyon = new Televizyon();					//Televizyon sınıfına ulaşmak için televizyon nesnesi
+	static boolean tvAcik = false;										//tv nin açık olup olmadığı kontrolü yapılır
 
 	static Scanner scanner = new Scanner(System.in);
 
@@ -20,7 +20,7 @@ public class Main {
 			switch (secim) {
 			case 1:
 
-				televizyonKur();
+				televizyonKur();					//televizyon nesnesi oluştuğunda case 1 içinde kanlları oluşturdum
 				kanllariOlustur();
 				break;
 			case 2:
@@ -89,7 +89,7 @@ public class Main {
 			System.out.println("Hangi Kanalı Açmak istiyorsunuz");
 			int kanalNo = scanner.nextInt();
 			televizyon.kanalDegis(kanalNo);
-			//System.out.println(kanal);
+
 		}
 
 	}
@@ -124,13 +124,13 @@ public class Main {
 	}
 
 	public static void kanllariOlustur() {
-		// Haber Kanalı
+		// Haber Kanalları oluşturuldu
 		televizyon.kanallariOlustur(new HaberKanali("CNN", 1));
 		televizyon.kanallariOlustur(new HaberKanali("NTV", 2));
 		televizyon.kanallariOlustur(new HaberKanali("HABERTURK", 3));
 		televizyon.kanallariOlustur(new HaberKanali("TRT Spor", 4));
 
-		// Muzik Kanalı
+		// Muzik Kanalı oluşturuldu
 		televizyon.kanallariOlustur(new MuzikKanali("Kral", 5));
 		televizyon.kanallariOlustur(new MuzikKanali("PowerTurk", 6));
 		televizyon.kanallariOlustur(new MuzikKanali("NumberOne", 7));

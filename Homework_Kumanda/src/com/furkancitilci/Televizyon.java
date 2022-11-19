@@ -1,7 +1,6 @@
 package com.furkancitilci;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Televizyon {
 
@@ -21,40 +20,37 @@ public class Televizyon {
 	}
 
 	public void televizyonAc() {
-		if (this.marka == null && this.boyut == null) {
+		if (this.marka == null && this.boyut == null) {										//televizyonun kurulup kurlmadığını kontrol ediyor
 			System.out.println("Lütfen önce Tv yi kurun ve kanalları oluşturun!!!");
 
 		} else {
 			System.out.println("Tv açıldı...");
-			Main.tvAcik = true;
+			Main.tvAcik = true;						
 		}
 
 	}
 
 	public void kanalBilgisi() {
 		for (Kanal kanal : kanallar) {
-			if(kanal.getClass() == HaberKanali.class) {
+			if (kanal.getClass() == HaberKanali.class) {								//haber kanallarını birlikte listeliyor
 				System.out.println("Haber Kanalları:");
 				System.out.println(kanal.toString());
-			}else {
-				System.out.println("Müzik Kanalları:");
+			} else {
+				System.out.println("Müzik Kanalları:");									//muzik kanallarını birlikte listeliyor
 				System.out.println(kanal.toString());
-				
+
 			}
-				
-			
 
 		}
 	}
 
- 
 	public void kanalDegis(int kanalNo) {
-		
-		 if (kanal.getKanalNo() == kanalNo) {
+
+		if (kanal.getKanalNo() == kanalNo) {
 			System.out.println("zaten aynı kanaldasınız");
-		} 
-		else if(kanal.getKanalNo() != kanalNo) {
+		} else if (kanal.getKanalNo() != kanalNo) {
 			for (int i = 0; i < kanallar.size(); i++) {
+
 				if (kanallar.get(i).getKanalNo() == kanalNo) {
 
 					kanal.setKanalAdi(kanallar.get(i).getKanalAdi());
@@ -62,9 +58,8 @@ public class Televizyon {
 					System.out.println(
 							"Kanal: " + kanallar.get(i).getKanalNo() + " Bilgi:" + kanallar.get(i).getKanalAdi());
 
-				}else
-					System.out.println("Kanal bilgisi bulunamamışır");
-				
+				}
+
 			}
 
 		}
@@ -100,11 +95,11 @@ public class Televizyon {
 
 	public void televizyonuKur(String marka, String boyut) {
 
-		if (this.marka == null && this.boyut == null) {
+		if (this.marka == null && this.boyut == null) {						//televizyonun ilk kurulumunu kontrol eder
 			this.marka = marka;
 			this.boyut = boyut;
 
-		} else
+		} else																// kurulan televizyon tekrar kurulamaz
 			System.out.println("Televizyonunuz daha önce: " + toString()
 					+ " olarak kuruldu!!!, tekrar kurmak için çıkış yapınız.");
 

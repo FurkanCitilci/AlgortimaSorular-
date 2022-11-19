@@ -7,9 +7,13 @@ public class HaberKanali extends Kanal {
 
 	}
 
+	
+	//haber kanalı bilgileri alındı
 	@Override
 	public String toString() {
+		
 		return "HaberKanali\n[Kanal ADI:" + getKanalAdi() + ", Kanal No:" + getKanalNo() + "]";
+		
 	}
 	
 	
